@@ -1,0 +1,19 @@
+/**
+ * ------------------------------------------------------------------------
+ * Editor Button for ContactFormPro - Joomla! 1.7 - 2.5
+ * ------------------------------------------------------------------------
+ * @copyright   Copyright (C) 2011-2012 Chartiermedia.com - All Rights Reserved.
+ * @license     GNU/GPLv3, http://www.gnu.org/copyleft/gpl.html
+ * @author:     Sebastien Chartier
+ * @link:       http://www.chartiermedia.com
+ * ------------------------------------------------------------------------
+ *
+ * @package	Joomla.Plugin
+ * @subpackage  plg_editors-xtd_contactformpro
+ * @version     1.00 (February 20, 2012)
+ * @since	1.7
+ */
+
+#editor-xtd-buttons div.contactformpro{
+    background: url(j_button2_contactformpro.png) transparent no-repeat scroll 100% 0;
+}

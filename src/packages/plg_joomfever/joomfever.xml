@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>plg_system_joomfever</name>
+    <author>Sebastien Chartier</author>
+    <creationDate>February 2011</creationDate>
+    <copyright>Copyright (C) 2011 joomfever.com. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>sebastien.chartier@gmail.com</authorEmail>
+    <authorUrl>www.joomfever.com</authorUrl>
+    <version>3.00</version>
+    <description>PLG_SYSTEM_JOOMFEVER_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="joomfever">joomfever.php</filename>
+        <folder>contactformpro</folder>
+    </files>
+    <scriptfile>install.plg_system_joomfever.php</scriptfile>
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_joomfever.ini</language>
+        <language tag="en-GB">en-GB.plg_system_joomfever.sys.ini</language>
+        <language tag="fr-FR">fr-FR.plg_system_joomfever.ini</language>
+        <language tag="fr-FR">fr-FR.plg_system_joomfever.sys.ini</language>
+    </languages>
+</extension>
