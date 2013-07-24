@@ -1,0 +1,77 @@
+/**
+ * ------------------------------------------------------------------------
+ * Plugin ContactFormPro for Joomla! 1.7 - 2.5
+ * ------------------------------------------------------------------------
+ * @copyright   Copyright (C) 2011-2012 joomfever.com - All Rights Reserved.
+ * @license     GNU/GPLv3, http://www.gnu.org/copyleft/gpl.html
+ * @author:     Sebastien Chartier
+ * @link:       http://www.joomfever.com
+ * ------------------------------------------------------------------------
+ *
+ * @package	Joomla.Plugin
+ * @subpackage  ContactFormPro
+ * @version     1.12 (February 20, 2012)
+ * @since	1.7
+*/
+
+
+div.cfp_contact_form.legerete{
+    padding-top:10px;
+    background: #f2f5f6; /* Old browsers */
+
+    -webkit-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+
+    -webkit-box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    -khtml-box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    -o-box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+
+    background: -moz-radial-gradient(center, ellipse cover,  #f2f5f6 0%, #e3eaed 62%, #c8d7dc 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#f2f5f6), color-stop(62%,#e3eaed), color-stop(100%,#c8d7dc)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #f2f5f6 0%,#e3eaed 62%,#c8d7dc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #f2f5f6 0%,#e3eaed 62%,#c8d7dc 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #f2f5f6 0%,#e3eaed 62%,#c8d7dc 100%); /* IE10+ */
+    background: radial-gradient(center, ellipse cover,  #f2f5f6 0%,#e3eaed 62%,#c8d7dc 100%); /* W3C */
+
+}
+
+div.cfp_contact_form.legerete.ie8{
+    border: 2px solid #ddd;
+}
+
+div.cfp_contact_form.legerete p.cfp_title{
+    display: block;
+    background: url('images/img_top.png') transparent no-repeat left top;
+    padding-left: 70px;
+    min-height: 60px !important;
+}
+
+div.cfp_contact_form.legerete fieldset{
+    margin:0;
+    padding:0;
+    border:none;
+    float:left;
+    display:inline;
+    margin-left:25px;
+}
+div.cfp_contact_form.legerete .inputbox{
+    border:1px solid #ddd;
+}
+div.cfp_contact_form.legerete textarea{
+    height:125px;
+    overflow:auto;
+}
+
+div.cfp_contact_form.legerete div.cfp_field #submit{
+    border:none;
+    background-color: #3399ff; /* Old browsers */
+    color:#fff;
+}
+div.cfp_contact_form.legerete div.cfp_field #submit:hover{
+    background-color: #3399ff;
+}

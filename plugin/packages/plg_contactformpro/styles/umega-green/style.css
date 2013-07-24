@@ -1,0 +1,124 @@
+/**
+ * ------------------------------------------------------------------------
+ * Plugin ContactFormPro for Joomla! 1.7 - 2.5
+ * ------------------------------------------------------------------------
+ * @copyright   Copyright (C) 2011-2012 joomfever.com - All Rights Reserved.
+ * @license     GNU/GPLv3, http://www.gnu.org/copyleft/gpl.html
+ * @author:     Sebastien Chartier
+ * @link:       http://www.joomfever.com
+ * ------------------------------------------------------------------------
+ *
+ * @package	Joomla.Plugin
+ * @subpackage  ContactFormPro
+ * @version     1.12 (February 20, 2012)
+ * @since	1.7
+*/
+
+
+div.cfp_contact_form.umega-green{
+    color: #ffffff;
+    padding: 10px 30px;
+    width: 355px !important;
+    border-radius: 12px;
+}
+
+div.cfp_contact_form.umega-green div.inner1{
+    background: #639300; /* Old browsers */
+    background: -moz-linear-gradient(top,  #639300 0%, #3ac100 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#639300), color-stop(100%,#3ac100)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #639300 0%,#3ac100 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #639300 0%,#3ac100 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #639300 0%,#3ac100 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #639300 0%,#3ac100 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#639300', endColorstr='#3ac100',GradientType=0 ); /* IE6-9 */
+    border: solid 1px #557c03;
+}
+
+div.cfp_contact_form.umega-green .inner2{
+    margin-top: -25px;
+    padding-top: 40px;
+    background: url('images/bg-top.png') no-repeat center top, url(images/bg-bottom.png) no-repeat center bottom;
+
+}
+div.cfp_contact_form.umega-green fieldset{
+    margin:0;
+    padding-top:.5em;
+    border:none;
+    border-top:1px solid #f1f1f1;
+}
+div.cfp_contact_form.umega-green legend{
+    background:#fff;
+    padding:0 5px;
+    font-style:italic;
+}
+
+div.cfp_contact_form.umega-green .cfp_label{
+    clear: left;
+    float:left;
+    width:25%;
+    display:block;
+    text-align:right;
+    padding-right:3%;
+}
+
+div.cfp_contact_form.umega-green textarea{
+    height:125px;
+    overflow:auto;
+}
+
+div.cfp_contact_form.umega-green .cfp_input{
+    width: 60%;
+    float:left;
+    clear: right;
+}
+div.cfp_contact_form.umega-green .inputbox{
+    margin:0;
+    width: 80%;
+    border:1px solid #ddd;
+}
+
+div.cfp_contact_form.umega-green div.cfp_field.submit{
+    border-color: #eee;
+}
+
+div.cfp_contact_form.umega-green div.cfp_field #submit,
+div.cfp_contact_form.umega-green .button{
+    color: #eee;
+    border: solid 1px #F9C004;
+    background-color: #EFA904;
+}
+
+div.cfp_contact_form.umega-green div.cfp_field #submit span{
+    line-height: 26px; /* height of the image in #submit span:after */
+}
+div.cfp_contact_form.umega-green div.cfp_field #submit:after{
+    content: url('images/forward.png');
+    vertical-align: bottom;
+}
+div.cfp_contact_form.umega-green label#label-mathguard_answer{
+    /*width: 200px;*/
+}
+div.cfp_contact_form.umega-green div.cfp_field{
+    margin-bottom: 15px;
+}
+div.cfp_contact_form.umega-green div.cfp_field.captcha input{
+    padding: 4px 3px;
+    width: 30px !important;
+}
+
+div.cfp_contact_form.umega-green .cfp_title{
+    height: 50px;
+    color: #111111;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+div.cfp_contact_form.umega-green #cfpBottom a,
+div.cfp_contact_form.umega-green #cfpBottom a:link,
+div.cfp_contact_form.umega-green #cfpBottom a:visited{
+    color: #eee;
+}
+
+div.cfp_contact_form.umega-green #cfpBottom a:hover{
+    color: #ccc;
+}

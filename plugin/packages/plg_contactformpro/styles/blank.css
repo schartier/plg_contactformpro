@@ -1,0 +1,370 @@
+/**
+ * ------------------------------------------------------------------------
+ * Plugin ContactFormPro for Joomla! 1.7 - 2.5
+ * ------------------------------------------------------------------------
+ * @copyright   Copyright (C) 2011-2012 joomfever.com - All Rights Reserved.
+ * @license     GNU/GPLv3, http://www.gnu.org/copyleft/gpl.html
+ * @author:     Sebastien Chartier
+ * @link:       http://www.joomfever.com
+ * ------------------------------------------------------------------------
+ *
+ * @package	Joomla.Plugin
+ * @subpackage  ContactFormPro
+ * @version     1.12 (February 20, 2012)
+ * @since	1.7
+*/
+
+/*** Basic css reset
+***/
+div.cfp_contact_form *,
+div.cfp_contact_form .button,
+div.cfp_contact_form .inputbox
+{
+    background: none transparent;
+    border:none;
+    padding:0;
+    margin:0;
+    font-size: inherit;
+    color: #111;
+    line-height: 1;
+    font-weight: inherit;
+    font-family: arial, Helvetica, sans-serif;
+    text-align: left;
+    color:inherit;
+    min-height: 0;
+}
+
+div.cfp_contact_form{
+    position: relative;
+    margin: auto;
+    color: #111;
+    font-size: 12px;
+    font-weight: normal;
+    text-shadow: #aaa 0 1px 1px;
+    width: 400px !important;
+}
+
+div.cfp_contact_form .inner1 {
+    position: relative;
+    top:0;
+    left:0;
+    filter: none !important;
+    -webkit-border-radius: inherit;
+    -khtml-border-radius: inherit;
+    -moz-border-radius: inherit;
+    -o-border-radius: inherit;
+    border-radius: inherit;
+    min-height: 100%;
+}
+
+div.cfp_contact_form .inner2{
+    padding: 15px;
+}
+
+div.cfp_contact_form #main,
+div.cfp_contact_form #all{
+    background: transparent;
+}
+
+div.cfp_contact_form .inputbox{
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.05) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.05)));
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.05) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=0 ); /* IE6-8 */
+    background-color: #fff;
+
+    color: #111;
+    border: solid 1px #ccc;
+    padding: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    margin: 3px 0 0;
+}
+
+div.cfp_contact_form .inputbox:focus{
+    -webkit-box-shadow: 0 0 3px #ffcc33;
+    -khtml-box-shadow: 0 0 3px #ffcc33;
+    -moz-box-shadow: 0 0 3px #ffcc33;
+    -o-box-shadow: 0 0 3px #ffcc339;
+    box-shadow: 0 0 3px #ffcc33;
+}
+
+div.cfp_contact_form input[type=text]{
+    width: 70%;
+}
+
+div.cfp_contact_form textarea{
+    width: 90%;
+    height: 120px;
+}
+
+div.cfp_contact_form label,
+div.cfp_contact_form p
+{
+    margin: 3px 0 0;
+}
+div.cfp_contact_form a,
+div.cfp_contact_form a:hover,
+div.cfp_contact_form a:link,
+div.cfp_contact_form a:active{
+    background: transparent;
+    text-decoration: none;
+}
+
+div.cfp_contact_form div.cfp_title{
+    font-size: 180%;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+div.cfp_contact_form .inputbox.invalid
+{
+    -webkit-box-shadow: 0px 0px 3px #f00;
+    -khtml-box-shadow: 0px 0px 3px #f00;
+    -moz-box-shadow: 0px 0px 3px #f00;
+    -o-box-shadow: 0px 0px 3px #f00;
+    box-shadow: 0px 0px 3px #f00;
+}
+
+div.cfp_contact_form label.invalid
+{
+    border: none;
+    -webkit-box-shadow: none;
+    -khtml-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+div.cfp_contact_form span.cfp_desc {
+    display: none;
+    margin: 0 0 0 10px;
+}
+
+div.cfp_contact_form div.cfp_field{
+    clear:both;
+    padding:0;
+    margin: 2px 0;
+}
+
+div.cfp_contact_form div.cfp_field.cfp_required label:after{
+    content: '*';
+}
+
+div.cfp_contact_form div.cfp_field input[type=checkbox]{
+    margin: 2px 15px;
+    padding: 0;
+    border: none;
+    background: none transparent;
+}
+
+div.cfp_contact_form div.cfp_field input[type=checkbox]:focus{
+    margin: 2px 15px;
+    padding: 0;
+    border: none;
+    background: none transparent;
+}
+
+div.cfp_contact_form .button{
+    display:table;
+    margin: auto;
+    border: solid 1px #aaa;
+    padding: 10px 20px;
+    font-weight: bold;
+    display:inline-block;
+    cursor:pointer;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.2))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#33000000',GradientType=0 ); /* IE6-8 */
+
+    background-color: #eee;
+    color: #333;
+}
+
+
+/* Submit outer div (row) */
+div.cfp_contact_form div.cfp_field.submit{
+    margin-top:15px;
+    padding-top: 15px;
+    text-align: center;
+    border-top:1px solid #f1f1f1;
+}
+/* Div wrapping the button */
+div.cfp_contact_form div.cfp_submit{
+    display:table;
+    margin: auto;
+}
+
+div.cfp_contact_form .button:hover{
+    border-color:#ddd;
+    text-shadow: 1px 1px 6px #999999;
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33000000', endColorstr='#00000000',GradientType=0 ); /* IE6-8 */
+    background-color: #eee;
+}
+
+div.cfp_contact_form div.cfp_field #submit span{
+    display:inline-block;
+    overflow: visible;
+}
+
+#cfpOverlay {
+    background-color: #ccc;
+    cursor: pointer;
+}
+#cfpOverlay.cfpLoading{
+    background: url('../images/sending.gif') no-repeat center center;
+}
+#cfpCenter{
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+}
+
+/*	Fixes for older or limited browsers	*/
+
+#cfpOverlay.cfpOverlayOpaque {
+    background: transparent url('../images/80.png') repeat;
+}
+/*
+#cfpOverlay.cfpOverlayAbsolute {
+    position: absolute;
+}*/
+
+#cfpOverlay.mbMobile {
+    position: absolute;
+    background-color: transparent;
+}
+
+div.cfp_contact_form #cfpBottom.mbMobile {
+    line-height: 24px;
+    font-size: 16px;
+}
+
+div.cfp_contact_form #cfpBottom {
+    position: absolute;
+    right: 8px; /*8px;*/
+    bottom: 5px; /*4px;*/
+}
+
+div.cfp_contact_form #cfpBottom a,
+div.cfp_contact_form #cfpBottom a:hover,
+div.cfp_contact_form #cfpBottom a:link,
+div.cfp_contact_form #cfpBottom a:visited{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 200%;
+    color: #111111;
+}
+
+/**************/
+
+div.cfp_contact_form div.cfp_msg {
+    padding: 10px;
+    min-height: 50px;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+div.cfp_contact_form div.cfp_msg_container div{
+    margin: 0;
+    padding: 0;
+}
+
+div.cfp_contact_form div.cfp_msg p{
+    line-height: 35px;
+    font-size: 180%;
+    margin-bottom: 10px;
+}
+
+div.cfp_contact_form div.cfp_msg ul{
+    list-style: disk inside none;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+div.cfp_contact_form div.cfp_msg.success {
+    background: url('../images/check.png') no-repeat left center;
+    padding-left: 70px;
+}
+
+div.cfp_contact_form div.cfp_msg.error {
+    background: url('../images/cross.png') no-repeat left center;
+    padding-left: 70px;
+}
+
+div.cfp_contact_form .clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+        margin:0;
+        padding:0;
+	line-height: 0 !important;
+	height: 0 !important;
+}
+
+/* Fix for ie */
+* html
+{
+    overflow-y: hidden;
+}
+* html body
+{
+    height: 100%;
+    overflow: auto;
+}
+
+div.cfp_contact_form .clearfix {
+	display: inline-block;
+}
+
+html[xmlns] div.cfp_contact_form .clearfix {
+	display: block;
+}
+
+* html div.cfp_contact_form .clearfix {
+	height: 1%;
+}
+
+#cfpCenter.cfpLoading .inner2{
+    /*background: url('../images/sending.gif') no-repeat center center;*/
+}
+
+div.cfp_contact_form div.cfp_field.captcha{
+    margin: 20px;
+    text-align: left;
+}
+
+div.cfp_contact_form div.cfp_field.captcha label.mathguard-label,
+div.cfp_contact_form div.cfp_field.copy label{
+    display: inline;
+    float:none;
+    width:auto;
+}
+
+div.cfp_contact_form div.cfp_field.captcha .inputbox.mathguard-answer{
+    display: inline-block;
+    width: 20px;
+}

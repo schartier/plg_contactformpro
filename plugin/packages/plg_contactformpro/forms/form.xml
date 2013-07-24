@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="basic" label="CONTACTFORMPRO_FIELDSET_BASIC">
+        <field name="mailto"
+            required="1"
+            validate="email"
+            type="email"
+            label="PLG_SYSTEM_CONTACTFORMPRO_MAILTO_LABEL"
+            description="PLG_SYSTEM_CONTACTFORMPRO_MAILTO_DESC"
+            size="50" />
+
+        <field name="display"
+            type="list"
+            default="popup"
+            label="PLG_SYSTEM_CONTACTFORMPRO_DISPLAY_LABEL"
+            description="PLG_SYSTEM_CONTACTFORMPRO_DISPLAY_DESC" >
+            <option value="popup">PLG_SYSTEM_CONTACTFORMPRO_POPUP</option>
+            <option value="form">PLG_SYSTEM_CONTACTFORMPRO_FORM</option>
+        </field>
+
+        <field name="title"
+            type="textarea"
+            label="PLG_SYSTEM_CONTACTFORMPRO_TITLE_LABEL"
+            description="PLG_SYSTEM_CONTACTFORMPRO_TITLE_DESC"
+            cols="30"
+            row="3" />
+
+        <field name="subject"
+            type="text"
+            label="PLG_SYSTEM_CONTACTFORMPRO_SUBJECT_LABEL"
+            description="PLG_SYSTEM_CONTACTFORMPRO_SUBJECT_DESC"
+            size="50" />
+
+        <field name="sender_name"
+            type="text"
+            label="PLG_SYSTEM_CONTACTFORMPRO_SENDER_NAME_LABEL"
+            description="PLG_SYSTEM_CONTACTFORMPRO_SENDER_NAME_DESC"
+            size="50" />
+    </fieldset>
+
+    <fieldset name="advanced" label="CONTACTFORMPRO_FIELDSET_ADVANCED" addfieldpath="/plugins/system/contactformpro/forms/fields">
+        <field name="style"
+            type="dirslist"
+            default="light"
+            description="PLG_SYSTEM_CONTACTFORMPRO_STYLE_DESC"
+            label="PLG_SYSTEM_CONTACTFORMPRO_STYLE_LABEL"
+            directories="plugins/system/contactformpro/styles;plugins/system/joomfever/contactformpro" />
+        <field name="label"
+            type="text"
+            label="PLG_SYSTEM_CONTACTFORMPRO_TEXT_FOR_POPUP_LABEL"
+            description="PLG_SYSTEM_CONTACTFORMPRO_TEXT_FOR_POPUP_DESC"
+            size="40" />
+        <field name="success_message"
+            type="textarea"
+            label="PLG_SYSTEM_CONTACTFORMPRO_SUCCESS_LABEL"
+            description="PLG_SYSTEM_CONTACTFORMPRO_SUCCESS_DESC"
+            cols="30"
+            rows="3" />
+        <field name="error_message"
+            type="textarea"
+            label="PLG_SYSTEM_CONTACTFORMPRO_ERROR_LABEL"
+            description="PLG_SYSTEM_CONTACTFORMPRO_ERROR_DESC"
+            cols="30"
+            rows="3" />
+        <field  name="validate-on-blur"
+            type="radio"
+            default="0"
+            label="PLG_SYSTEM_CONTACTFORMPRO_VALIDATE_ON_BLUR_LABEL"
+            description="PLG_SYSTEM_CONTACTFORMPRO_VALIDATE_ON_BLUR_DESC" >
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+</form>

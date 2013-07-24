@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="1.6">
+  <name>ContactFormPro package</name>
+  <packagename>contactformpro</packagename>
+  <version>2.22</version>
+  <url>http://joomla.uuebdesign.com</url>
+  <packager>joomla.uuebdesign.com</packager>
+  <packagerurl>http://joomla.uuebdesign.com</packagerurl>
+  <description>ContactFormPro plugin with editor button!</description>
+  <files folder="packages">
+    <file type="plugin" id="plg_contactformpro" group="system">plg_contactformpro.zip</file>
+    <file type="plugin" id="plg_contactformpro_btn" group="editors-xtd">plg_contactformpro_btn.zip</file>
+    <file type="plugin" id="plg_joomfever" group="system">plg_joomfever.zip</file>
+  </files>
+</extension>

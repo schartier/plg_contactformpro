@@ -1,0 +1,86 @@
+/**
+ * ------------------------------------------------------------------------
+ * Plugin ContactFormPro for Joomla! 1.7 - 2.5
+ * ------------------------------------------------------------------------
+ * @copyright   Copyright (C) 2011-2012 joomfever.com - All Rights Reserved.
+ * @license     GNU/GPLv3, http://www.gnu.org/copyleft/gpl.html
+ * @author:     Sebastien Chartier
+ * @link:       http://www.joomfever.com
+ * ------------------------------------------------------------------------
+ *
+ * @package	Joomla.Plugin
+ * @subpackage  ContactFormPro
+ * @version     1.12 (February 20, 2012)
+ * @since	1.7
+*/
+
+
+div.cfp_contact_form.icones{
+    /*** Border radius ***/
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+
+    /*** Box shadow ***/
+    -webkit-box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    -khtml-box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    -o-box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+
+    border: 1px solid #fff;
+    border-top-color: #fff;
+    border-bottom-color: #ccc;
+    border-right-width: 0px;
+    border-left-width: 0px;
+
+    padding-top:10px;
+    background-color: #fff;
+}
+div.cfp_contact_form.icones.ie8{
+    border: 2px solid #ddd;
+}
+div.cfp_contact_form.icones fieldset{
+    margin:0;
+    padding-top:.5em;
+    border:none;
+    border-top:1px solid #f1f1f1;
+}
+div.cfp_contact_form.icones legend{
+    background:#fff;
+    padding:0 5px;
+    font-style:italic;
+}
+div.cfp_contact_form.icones label{
+    float:left;
+    width:20%;
+    display:block;
+    text-align:right;
+    margin-right:10px;
+    margin-bottom: 15px;
+}
+
+div.cfp_contact_form.icones .inputbox{
+    margin:0;
+    width: 65%;
+    border:1px solid #ddd;
+    padding:3px 5px 3px 25px;
+}
+
+div.cfp_contact_form.icones input#sender_name{background:#fff url('images/form_name.gif') no-repeat 5px 50%;}
+div.cfp_contact_form.icones input#sender_email{background:#fff url('images/form_email.gif') no-repeat 5px 50%;}
+div.cfp_contact_form.icones input#subject{background:#fff url('images/form_subject.gif') no-repeat 5px 50%;}
+div.cfp_contact_form.icones textarea#message{background:#fff url('images/form_note.gif') no-repeat 5px 6px;}
+
+div.cfp_contact_form.icones div.cfp_field #submit{
+    color: #ffffff;
+    background-color: #e2a719;
+}
+div.cfp_contact_form.icones div.cfp_field #submit:hover{
+    background-color: #e2a719;
+}
+div.cfp_contact_form.icones div.cfp_field #submit span:after{
+    content: ' >>';
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>plg_system_contactformpro</name>
+    <author>Sebastien Chartier</author>
+    <creationDate>February 2011</creationDate>
+    <copyright>Copyright (C) 2011 joomfever.com. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>sebastien.chartier@gmail.com</authorEmail>
+    <authorUrl>www.joomfever.com</authorUrl>
+    <version>2.24</version>
+    <description>PLG_SYSTEM_CONTACTFORMPRO_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="contactformpro">contactformpro.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>head.php</filename>
+        <folder>captcha</folder>
+        <folder>css</folder>
+        <folder>forms</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>styles</folder>
+        <folder>views</folder>
+    </files>
+    <scriptfile>install.plg_system_contactformpro.php</scriptfile>
+    <languages>
+        <language tag="en-GB">language/en-GB.plg_system_contactformpro.ini</language>
+        <language tag="en-GB">language/en-GB.plg_system_contactformpro.sys.ini</language>
+        <language tag="fr-FR">language/fr-FR.plg_system_contactformpro.ini</language>
+        <language tag="fr-FR">language/fr-FR.plg_system_contactformpro.sys.ini</language>
+        <language tag="nl-NL">language/nl-NL.plg_system_contactformpro.ini</language>
+        <language tag="nl-NL">language/nl-NL.plg_system_contactformpro.sys.ini</language>
+        <language tag="pt-BR">language/pt-BR.plg_system_contactformpro.ini</language>
+        <language tag="pt-BR">language/pt-BR.plg_system_contactformpro.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic" addfieldpath="/plugins/system/contactformpro/forms/fields">
+                <field  name="display"
+                        type="radio"
+                        default="popup"
+                        label="PLG_SYSTEM_CONTACTFORMPRO_DISPLAY_LABEL"
+                        description="PLG_SYSTEM_CONTACTFORMPRO_DISPLAY_DESC" >
+                    <option value="popup">PLG_SYSTEM_CONTACTFORMPRO_POPUP</option>
+                    <option value="form">PLG_SYSTEM_CONTACTFORMPRO_FORM</option>
+                </field>
+
+                <field  name="style"
+                        type="dirslist"
+                        default="light"
+                        description="PLG_SYSTEM_CONTACTFORMPRO_STYLE_DESC"
+                        label="PLG_SYSTEM_CONTACTFORMPRO_STYLE_LABEL"
+                        directories="plugins/system/contactformpro/styles;plugins/system/joomfever/contactformpro" />
+
+                <field  name="use_icons"
+                        type="radio"
+                        default="1"
+                        label="PLG_SYSTEM_CONTACTFORMPRO_USE_ICONS_LABEL"
+                        description="PLG_SYSTEM_CONTACTFORMPRO_USE_ICONS_DESC" >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field  name="appkey"
+                                        type="text"
+                                        label="PLG_SYSTEM_CONTACTFORMPRO_APPKEY_LABEL"
+                                        description="PLG_SYSTEM_CONTACTFORMPRO_APPKEY_DESC" />
+            </fieldset>
+
+            <fieldset name="advanced">
+
+                <field name="title"
+                                       type="text"
+                                       label="PLG_SYSTEM_CONTACTFORMPRO_TITLE_LABEL"
+                                       description="PLG_SYSTEM_CONTACTFORMPRO_TITLE_DESC"
+                                       size="30" />
+
+                <field name="success_message"
+                                       type="text"
+                                       label="PLG_SYSTEM_CONTACTFORMPRO_SUCCESS_LABEL"
+                                       description="PLG_SYSTEM_CONTACTFORMPRO_SUCCESS_DESC"
+                                       size="30" />
+
+                <field name="error_message"
+                                       type="text"
+                                       label="PLG_SYSTEM_CONTACTFORMPRO_ERROR_LABEL"
+                                       description="PLG_SYSTEM_CONTACTFORMPRO_ERROR_DESC"
+                                       size="30" />
+
+                <field name="label"
+                                       type="text"
+                                       label="PLG_SYSTEM_CONTACTFORMPRO_TEXT_FOR_POPUP_LABEL"
+                                       description="PLG_SYSTEM_CONTACTFORMPRO_TEXT_FOR_POPUP_DESC"
+                                       size="30" />
+
+                <field  name="validate_session"
+                                        type="radio"
+                                        default="0"
+                                        label="PLG_SYSTEM_CONTACTFORMPRO_VALIDATE_SESSION_LABEL"
+                                        description="PLG_SYSTEM_CONTACTFORMPRO_VALIDATE_SESSION_DESC" >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field  name="captcha_system"
+                                        type="radio"
+                                        default="0"
+                                        label="PLG_SYSTEM_CONTACTFORMPRO_CAPTCHA_LABEL"
+                                        description="PLG_SYSTEM_CONTACTFORMPRO_CAPTCHA_DESC" >
+                    <option value="0">PLG_SYSTEM_CONTACTFORMPRO_CAPTCHA_MATHGUARD</option>
+                    <option value="1">PLG_SYSTEM_CONTACTFORMPRO_CAPTCHA_SYSTEM</option>
+                </field>
+
+                <field  name="fixedaddress"
+                                        type="text"
+                                        label="PLG_SYSTEM_CONTACTFORMPRO_FIXEDADDRESS_LABEL"
+                                        description="PLG_SYSTEM_CONTACTFORMPRO_FIXEDADDRESS_DESC" />
+
+                <field  name="validate-on-blur"
+                                        type="radio"
+                                        default="0"
+                                        label="PLG_SYSTEM_CONTACTFORMPRO_VALIDATE_ON_BLUR_LABEL"
+                                        description="PLG_SYSTEM_CONTACTFORMPRO_VALIDATE_ON_BLUR_DESC" >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>
