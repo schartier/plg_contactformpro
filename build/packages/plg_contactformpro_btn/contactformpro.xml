@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="editors-xtd" method="upgrade">
+	<name>plg_editors-xtd_contactformpro</name>
+	<author>Sebastien Chartier</author>
+	<creationDate>February 2012</creationDate>
+	<copyright>Copyright (C) 2012 Chartiermedia.com</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>sebastien.chartier@gmail.com</authorEmail>
+	<authorUrl>www.chartiermedia.com</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_EDITORS-XTD_CONTACTFORMPRO_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="contactformpro">contactformpro.php</filename>
+		<filename>index.html</filename>
+		<filename>style.css</filename>
+		<filename>j_button2_contactformpro.png</filename>
+	</files>
+        <scriptfile>install.plg_editors-xtd_contactformpro.php</scriptfile>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_contactformpro.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_contactformpro.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.plg_editors-xtd_contactformpro.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.plg_editors-xtd_contactformpro.sys.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.plg_editors-xtd_contactformpro.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.plg_editors-xtd_contactformpro.sys.ini</language>
+	</languages>
+</extension>
