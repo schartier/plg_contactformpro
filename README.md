@@ -8,4 +8,6 @@ If you edit the tag manually, you must use # instead of @ in you email address (
 
 example (html view):
 
+```
 {contactformpro mailto="sebastien.chartier#gmail.com" error_message="<p>There was an error</p>" display="popup" style="light" width="400" /}
+```
